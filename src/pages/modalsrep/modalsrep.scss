@@ -1,0 +1,95 @@
+page-modalsrep {
+.pic_mod{
+    width:100%;
+    float:left;
+    text-align: center;
+}
+.reject_alrt h4{
+  width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    color:#000;
+
+}
+
+.pic_mod img {
+    width: 90px;
+padding: 10px;
+
+}
+
+textarea#comment {
+    width: 88%;
+    float: left;
+    text-align: left;
+    margin: 16px;
+    background: #f9f9f9;
+    border: 1px solid #aba6b9;
+}
+
+.rej_red {
+    width: 42%;
+    float: left;
+    font-size: 11px;
+    background:#d52b3f;
+    margin-left:10px;
+    padding: 6px 12px;
+}
+
+.buton_cover {
+   width: 100%;
+   margin: 0 5%;
+   float: left;
+
+} 
+
+.main_covr {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    height: 100vh;
+}
+
+  .size_adj {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        // margin: 71% 0px 0px 43%;
+}
+
+.show-page {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0.7;
+}
+
+ .cover_mod {
+    width: 80%;
+    float: left;
+    background: #fff;
+    margin: 40% 32px;
+    padding: 11px 0;
+    border-radius: 4px;
+}
+
+.acc_green {
+    width: 42%;
+    float: left;
+    font-size: 11px;
+    background: #02a499;
+    padding: 6px 12px;
+}
+
+.acc_green:hover {
+    background-color: #02a499 !important;
+}
+
+.star {
+    margin: 0 auto;
+    display: table;
+    padding-top: 23px;
+    padding-bottom: 9px;
+}
+}
+

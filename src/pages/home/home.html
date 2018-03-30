@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-navbar color="theme" hideBackButton padding class="pading_zro">
+  
+
+   <ion-buttons class="box" >
+   
+     <ion-grid style="padding-left: 0px;">
+            <ion-row>
+                <ion-col col-7 style="padding-left: 0px;">
+   <div class="wrt_lft" >
+    <h2>Current work location  </h2>
+</div>
+    </ion-col>
+
+    <ion-col col-5>
+	<button  class="loctn" ion-button color="dark" (click)="backlocation()">CHANGE <br /> LOCATION</button>
+      
+      
+    </ion-col> 
+   
+  </ion-row>
+</ion-grid>
+   
+   
+     <form #heroForm1="ngForm" novalidate class="signup_form"> 
+      <!-- <form #heroForm="ngForm" > -->
+      
+      <div class="heading">
+        <!--<h1>Change location</h1>-->
+		<h3>{{searchlocation}}</h3>
+      </div>
+
+</form>
+
+
+     <!--<div class="srchbox">
+     <div class="imgbox imgset"><img src="assets/imgs/search2.png"/></div>
+     <div class="inputbox"><input type="text" name="" placeholder="Search For Services"></div>
+    </div>-->
+
+    <form #heroForm="ngForm" novalidate class="signup_form"> 
+
+    <ion-input class="txtbx change" required placeholder= "Enter search radius in km" name="Search" [(ngModel)]="data.Search" type="number" id="number" required minlength="6" #Search="ngModel"></ion-input>
+    
+   <ion-item>
+     <ion-label>Service Category</ion-label> 
+   <ion-select [(ngModel)]="data.servicecat" name="servicecat" id="servicecat" required placeholder="Service Category"  #servicecat="ngModel">
+       
+<!--       <ion-label>Service Category</ion-label> -->
+
+      
+       <ion-option *ngFor="let name of catss" value="{{name.Category.id}}">{{name.Category.name}}</ion-option>
+   </ion-select>
+  </ion-item>
+
+  
+    <ion-item>
+        <ion-label>Type of service provider</ion-label> -->
+   <ion-select [(ngModel)]="data.service" name="service" id="service" required placeholder="Type of service provider"  #service="ngModel">
+      <ion-option value="individual"> Individual  </ion-option>
+      <ion-option value="company"> Company </ion-option>
+      <ion-option value="both"> Individuals and companies </ion-option>
+   </ion-select>
+    </ion-item>
+     <!-- </form>  -->
+     <button ion-button block round class="current btns" (click)=	servicesbycategory(heroForm) type="submit" >SEARCH</button>
+   
+    </form>
+   </ion-buttons>
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <div class="nodata" *ngIf="!cats?.length"><img src="assets/imgs/NoDataAvailable.png"></div>
+
+
+  <div class="repairsbx" *ngFor="let cat of cats">
+  
+  <h1>{{cat.Category.name}}</h1>
+  <span (click)="seeservice(cat.Category.id)">See All</span>
+
+  <ion-scroll scrollX="true" scrollY="true">
+
+        <ion-card *ngFor="let catsub of cat.Category.SubCategory">
+            <ion-card-content (click)="aboutservice(catsub.id,cat.Category.id)">
+                <img src="{{catsub.image}}"/>
+                 <h1 >{{catsub.name}}</h1>
+            </ion-card-content> 
+        </ion-card>
+    </ion-scroll>
+
+  </div>
+  
+    <div class="servicesbx" *ngIf="cats?.length">
+    <h1>All Services</h1>
+    <!--<img (click)="allservices()" src="assets/imgs/services.jpg"/>-->
+	<div class="gren_bckgrnd">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+	<button ion-button round class="clck_herre" (click)=	servicesbycategory(heroForm) type="submit" >CLICK HERE TO SEARCH</button>
+	<h5 class="redd_mree">Read more at <a href="">www.Yakazi.com</a></h5>
+	</div>
+  </div>
+</ion-content>
+<style>
+.notshw .alert-radio-icon{
+display: none !important;
+}
+</style>

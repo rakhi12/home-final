@@ -1,0 +1,29 @@
+<!--ion-header>
+  <ion-navbar  color="blues">
+    <ion-title>
+      <h4 class="noti_less">Modal</h4>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header-->
+<ion-content class="menu size_adj">
+<div class="main_covr">
+<div class="cover_mod">
+  <!--div class="pic_mod">
+  <img src="assets/image/rej.png" width="20%">
+  </div-->
+  <form #rejectForm="ngForm"novalidate>
+  <div class="reject_alrt">
+  <h4>Rate this job</h4>
+  <div class="star">
+   <rating ng-init="1" [(ngModel)]="data.jobstar" name="jobstar"></rating> 
+   </div>
+  </div>
+  <div class="buton_cover">
+     <button ion-button color="secondary" class="acc_green" (click)="rating(rejectForm)">SUBMIT</button>
+<button ion-button color="danger" class="rej_red" (click)="closeModal()">CANCEL</button>
+  </div>
+  </form>
+</div>
+</div>
+</ion-content>

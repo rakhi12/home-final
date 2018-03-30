@@ -1,0 +1,86 @@
+page-viewdetail {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-align: center;}
+	.back-button{color:#02a499;}
+	
+	
+	h5 {
+    color: red;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+p{
+font-size:13px;
+margin-top: 5px;
+}
+
+.feesbtn{
+margin-bottom:10px;
+text-transform: none !important;
+}
+
+	.detail{
+
+		h2{
+				font-size: 17px;
+    color: #929292;
+    font-weight: normal;
+			}
+
+		.form-sec{
+			width: 100%;
+			float: left;
+			ion-label{
+				width: 100%;
+    			float: left;
+    			margin: 0px;
+    			margin-bottom: 20px;
+    			padding-left: 160px;
+    			position: relative;
+    			text-overflow: unset;
+    			 overflow: unset;
+    			 white-space: unset;
+    			 	font-size: 14px;
+    			span{
+    				font-size: 14px;
+    				font-weight: bold;
+    				position: absolute;
+    				left: 0;
+    			}
+			}
+			
+			ul{
+                 margin-bottom: 0;
+                }
+		}
+
+	}
+        
+  .chat  {
+    float: right;
+    font-size: 26px;
+    color: #02a499;
+}
+    .form-sec ul.rating li ion-icon{
+	 font-size:22px;
+	 }
+.notice {
+    width: 100%;
+    float: left;
+}
+.notice label {
+    color: red;
+    font-size: 15px;
+    width: 17%;
+    float: left;
+}
+.notice h3 {
+    width: 83%;
+    float: left;
+    font-size: 15px;
+    margin: 0;
+    font-weight: 400;
+    color: #000;
+}
+}

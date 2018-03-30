@@ -1,0 +1,157 @@
+page-ongoing-next {
+#maps{width:100%; height: 450px;}
+.srvce_dtl {
+  width: 100%;
+  float: left;
+}
+.srvc_ttl {
+  width: 100%;
+  float: left;
+}
+.srvc_ttl h3 {
+  width: 100%;
+  float: left;
+  margin: 20px 0 8px 0;
+  color: #8d8d8d;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.text_dtl {
+  width: 100%;
+  float: left;
+}
+.text_dtl h3 {
+  width: 100%;
+  float: left;
+  color: #8d8d8d;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 10px 0 0 0;
+}
+.ttl_sb {
+    width: 100%;
+    float: left;
+   margin: 3px 0 0 0;
+    color: #8dbcb7;
+    font-size: 17px;
+}
+.text_dtl h6{
+ width: 100%;
+    float: left;
+    margin: 3px 0 0 0;
+    color: #000;
+    font-size: 15px;
+
+}
+.prvdr_dtl{
+    width:100%;
+    float:left;
+    margin-top: 30px;
+}
+.prvdr_ttl{
+    width:100%;
+    float:left;
+}
+.prvdr_ttl h3 {
+  width: 100%;
+  float: left;
+  margin: 20px 0 0 0;
+  color: #8d8d8d;
+  font-size: 20px;
+  font-weight: 600;
+}
+.map_lcte {
+    width: 100%;
+    float: left;
+}
+.nme_stnd {
+    width: 100%;
+    float: left;
+    margin: 0px 0 7px 0;
+}
+.nme_stnd h2 {
+    width: 50%;
+    float: left;
+    margin: 0;
+    font-size: 15px;
+font-weight: 500;
+color: #8d8d8d;
+}
+.nme_stnd span {
+  width: 50%;
+float: right;
+margin-top: -2px;
+font-size: 15px;
+font-weight: 500;
+color: #8dbcb7;
+word-wrap: break-word;
+white-space: normal;
+}
+.header-title{
+        margin-right: 40px;
+width: 80%;
+float: right;
+    }
+.toolbar-title{
+    color:#02a499;
+    font-size: 15px !important; 
+     font-weight: bold; 
+ text-transform: uppercase;
+ width:100%;
+ text-align:center;
+}
+.back-button{color:#02a499;}
+.label {
+    margin: 6px 0px 10px 0;
+}
+
+.inimg{
+position: relative;
+overflow: hidden;
+width: 92px;
+height: 92px;
+float: left;
+margin: 15px 15px 0 0;
+
+}
+.inimg img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+.text_prvdr {
+    width: 100%;
+    float: left;
+	margin-bottom: 10px;
+}
+.pic_stnd {
+    width: 100px;
+    float: none;
+    margin: 5px auto 15px auto;
+    display: block;
+    height: 100px;
+}
+.pic_stnd img {
+    width: 100%;
+    float: left;
+    height: 100%;
+    border-radius: 50px;
+    border: 3px solid #aaa;
+}
+.providercerti {
+    width: 100%;
+    float: left;
+}
+.providercerti h3 {
+    margin-bottom: 0px;
+}
+.upld ion-label{
+white-space: normal !important;
+}
+}

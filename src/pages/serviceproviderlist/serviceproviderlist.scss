@@ -1,0 +1,244 @@
+page-serviceproviderlist {
+
+
+.dstnc_red {
+    width: 100%;
+    float: left;
+	margin-bottom: 12px;
+}
+
+.more{
+
+width:100%;
+float:left;
+font-weight:normal;
+font-size:11px;
+color: #383737;
+}
+
+    .dstnc_red h2 {
+   
+    float: left;
+font-size: 14px;
+width: 100%;
+font-weight: 600;
+}
+.bld_nne {
+   
+   float: left;
+font-weight: normal !important;
+font-size: 12px;
+width: 100%;
+
+white-space: normal !important;
+ 
+ 
+
+  /* BOTH of the following are required for text-overflow */
+  white-space: nowrap;
+  overflow: hidden;
+   
+}
+
+   
+    .toolbar-title {
+        color: #02a499;
+        font-size: 15px !important;
+        font-weight: normal;
+        text-align: center;
+    }
+    .back-button {
+        color: #02a499;
+    }
+    .chklist {
+        p {
+            font-size: 16px;
+            background-color: #f0f0f0;
+padding: 10px 5px;
+margin-bottom: 20px;
+        }
+        .list-outer {
+            width: 100%;
+            float: left;
+            
+            
+            ion-list {
+                ion-item {
+                    ion-radio {
+                        margin: 0;
+                    padding-top: 0px;
+                    }
+                    padding: 0;
+                    .item-inner {
+                        padding: 0;
+                        .input-wrapper {
+                            ion-label {
+                                display: inline-block;
+                                overflow: unset !important;
+                               
+                            }
+                            /*user-avatar*/
+                        }
+                        /* input wraper*/
+                    }
+                    /* item inner*/
+                }
+                /* item*/
+                
+                float: left;
+                margin: 0px 0 11px 0;
+                width:100%;
+                ion-radio {
+                    .radio-icon {
+                        border-color: #02a499;
+                        .radio-inner {
+                            background-color: #02a499;
+                        }
+                    }
+                }
+            }
+            /* xhek radio*/
+            
+            .view {
+                
+                padding: 5px 12px !important;
+                font-size: 12px;
+                color: #fff;
+                background-color: #02a499;
+                 transform: all ease-in-out 0.3s;
+            }
+            .view:hover {background-color: #000;}
+        }
+        /* list outer*/
+    }
+    /* chk list*/
+    
+    p {
+        margin: 0;
+    }
+    ion-item {
+        padding: 0;
+        border-bottom: none !important;
+    }
+    .item-inner {
+        border-bottom: none !important;
+        ion-label {
+            margin: 3px 8px 3px 0 !important;
+            font-size: 15px;
+            span {
+                float: right;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+    
+   .list-outer .provdr-lst .user-avatar { width: 16%; height: auto; float: left; padding-top: 10px;}
+   .list-outer .provdr-lst .user-avatar .proflimg {
+       border: 2px solid #000; 
+       border-radius: 50%; 
+       width: 50px;
+       height: 50px;
+   position: relative;
+overflow: hidden;
+   margin: 0 5px;}
+   .list-outer .provdr-lst .user-details {
+       width: 90%;
+       height: auto; 
+       float: left;
+       padding: 5px;
+   margin-top: 0px;
+   margin-left: 0px;
+   }
+   .list-outer .provdr-lst .view-btn {
+       width: 20%; 
+       height: auto; 
+       float: left; 
+   margin-left: -15px;
+margin-top: 5px;
+   }
+  .list-outer .provdr-lst .rdobtn button.item-cover{ width: 20px; float: left;}
+  .usrchked {
+      width: 10%;
+      height: auto;
+      float: left;
+  margin-top: 12px;}
+  .usrchked button { width: 20px; float: left;}
+  
+.usrchked .radio {
+    margin: -8px 11px 12px 4px !important;
+}
+  
+  .prvbtn {
+    font-size: 12px;
+}
+
+.or {
+    position: relative;
+	margin:0 auto;
+	display:table;
+	margin: 9px auto 6px;
+}
+
+.or::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 59px;
+   top: 5px;
+background-color: #cbcbcb;
+right: 28px;
+}
+
+.or::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 59px;
+    top: 5px;
+    background-color: #cbcbcb;
+    left: 28px;
+}
+  
+h6 {
+    color: #8d8d8d;
+	margin:0;
+} 
+
+.signup_form {
+    border-top: 1px solid #d5d5d5;
+	margin-top: 5px;
+} 
+ .chat  {
+  
+   margin-left: 16px;
+font-size: 30px;
+color: #02a499;
+margin-top: 18px;
+}
+
+ .provdr-lst { border-bottom:1px solid #dadada;
+            margin:15px 0;}
+ 
+}
+.item-md .radio-md[item-left],
+.item-md .radio-md[item-start] {
+    margin: 11px 11px 12px 4px;
+}
+
+ul {
+    padding: 0px;
+    margin-top: -8px;
+ 
+  &.rating li {
+    padding: 5px 2px !important;
+    background: none;
+    color: #ffb400;
+ 
+    ion-icon {
+      font-size: 32px;
+    }
+  }
+ 
+
+}

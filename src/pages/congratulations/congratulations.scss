@@ -1,0 +1,67 @@
+page-congratulations {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase; text-align: center;}
+	.back-button{color:#02a499;}
+.spacer {
+    width: 100%;
+    float: left;
+    height: 6vh;
+}
+.box{
+width:100%;
+	float:left;
+}
+.top_lr {
+    margin-top: 5vh;
+    width: 100%;
+    float: left;
+}
+.cong{
+float: left;
+width: 100%;
+text-align: center;
+font-size: 15px;
+color: #878787;
+}
+	.box{
+	
+		h1{color: #878787;
+    		font-size: 16px;
+    		text-align: center;}
+		.check{
+			   width: 100px;
+height: 100px;
+border-radius: 50%;
+border: 3px solid #007f00;
+margin: 0 auto;
+position: relative;
+
+    			img{
+    				max-width: 100%;
+border: 0;
+width: 62%;
+position: absolute;
+bottom: 0;
+right: 0;
+left: 0;
+margin: 0 auto;
+top: 21px;
+    			}
+		}
+                
+                ul {
+                    padding: 0px;
+ 
+                    &.rating li {
+                    padding: 5px 10px !important;
+                    background: none;
+                    color: #ffb400;
+ 
+                    ion-icon {
+                    font-size: 30px;
+                   }
+                  }
+               }
+	}
+
+}

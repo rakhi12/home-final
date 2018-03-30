@@ -1,0 +1,56 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "130283147733114",
+      "APP_NAME": "Home Service",
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-googleplus": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-nativegeocoder": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-stripe": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.service.app"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.service.app"
+    }
+  },
+  "dependent_plugins": {}
+}

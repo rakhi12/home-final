@@ -1,0 +1,40 @@
+<ion-header>
+        
+  <ion-navbar>
+     <!--<ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back" (click)="back()"></ion-icon>-->
+     <ion-title class="header-title">MY CHATS</ion-title>
+  </ion-navbar>
+        
+</ion-header>
+        
+<ion-content class="has-footer">
+    
+<div *ngIf="converstaion!=0" class="chatouter">
+<ion-list>
+  <ion-item class="brdr_btn" *ngFor="let Chat_list of myChat" (click)="chatuser(Chat_list.B.id)">
+            
+    <ion-avatar item-start >
+        
+      <img src="{{Chat_list.B.image}}">
+    </ion-avatar>
+    <h2 class="usr_nme">{{Chat_list.B.firstname}} {{Chat_list.B.lastname}}</h2>
+<!--              <h3 class="usr_nme" *ngIf="this.myChat==undefined">No Chats</h3>-->
+
+    <p class="cht_txt">{{Chat_list[0].lastmessage}}</p>
+
+    <span class="date_Sze">{{Chat_list[0].created | date:'MMM d, y h:mm a'}}</span>
+  </ion-item>
+</ion-list>
+</div>
+<div class="nodata" *ngIf="!myChat?.length">
+  <div class="chatimg">
+  <img src="assets/imgs/no_msg.png">
+  </div>
+<h5 class="nofound">No Message, yet.</h5>
+<p class="nofoundpara">No message in your inbox, yet. Start chatting with people arround you.</p>
+</div>
+
+</ion-content>
+        
+
+        

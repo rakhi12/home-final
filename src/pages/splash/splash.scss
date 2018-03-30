@@ -1,0 +1,38 @@
+page-splash {
+    
+    .spacer{
+        width:100%;
+        float:left;
+        height:40vh;
+    }
+ .logo_set {
+    width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+	height: 100%;
+}
+
+.btn {
+    width: 100%;
+    float: left;
+    position: absolute;
+    bottom: 26px;
+} 
+
+.logo_set img {
+    width: 100%;
+	height:100%;
+}
+
+.bck_sys{
+   width: 90% !important;
+float: none;
+margin: 0 auto 15px auto !important; 
+}
+   .spacer1{
+        width:100%;
+        float:left;
+        height:26vh;
+    }
+}

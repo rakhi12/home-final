@@ -1,0 +1,535 @@
+page-home {
+
+.gren_bckgrnd {
+    width: 100%;
+    float: left;
+    background: #02a499;
+}
+.gren_bckgrnd p {
+    width: 100%;
+    float: left;
+    padding: 0px 9px;
+	color: #fff;
+	margin: 8px 0 0 0;
+}
+.redd_mree {
+    width: 100%;
+    float: left;
+    color: #fff;
+    font-size: 13px;
+    padding: 0 0px 0 8px;
+	margin: 8px 0;
+}
+.redd_mree a {
+    color: #000;
+	text-decoration:none;
+}
+.clck_herre {
+    float: right;
+    background: #666666;
+        background-color: rgb(102, 102, 102);
+    padding: 0px 10px;
+	margin-right: 8px;
+}
+.nodata {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: table;
+  padding: 50px 0;
+}
+
+h3{
+font-size:16px ;
+color: #e0e44c;
+margin: 0 0 8px 0;
+}
+
+ .loctn{
+border-radius: 19px;
+padding: 13px 20px;
+background-color: #666666;
+font-size: 10px;
+line-height: 13px;
+margin-top: -5px;
+margin-left: 20px;
+}
+
+.nodata img {
+  width: 100%;
+}
+.box{
+	.heading{ width: 100%;position: relative;
+       
+		h1{
+    	color: #fff;
+    	font-weight: normal;
+    	text-transform: uppercase;
+    	font-size: 14px;
+    	
+        width: 100%;
+float: left;
+margin: 0;
+		}
+        }   
+
+ .wrt_lft{
+     width: 100%;
+    float:left;
+        }
+
+.wrt_lft h2{
+ color: #fff;
+font-weight: normal;
+font-size: 16px;
+position: relative;
+float: left;
+margin: 0;
+     }     
+
+	.imgbox{ 
+    background: transparent;
+    margin-top: 11px;
+ 
+    top: 0;
+    position: absolute;
+    width: 31px;
+    right: 0;}
+
+    ion-select,  {
+    max-width: 100%;
+    background: #fff;
+    width: 100%;
+        padding: 5px 10px;
+    margin-bottom: 6px;
+        position: relative;
+
+	}
+    .txtbx{
+        max-width: 100%;
+    background: #fff;
+    width: 100%;
+        margin-bottom: 0px;
+    padding: 0 8px;
+    float: left;
+    border-bottom: 1px solid #d0d0d0;
+
+    .text-input{
+            margin: 10px 7px;
+    }
+
+
+    }
+.txt_hldr {
+        
+ width: 100%;
+float: left;
+
+        
+ }
+
+.txt_hldr .item {
+            
+ background: transparent;
+ padding: 0px;
+            
+    }
+.mrgn_txt .text-input{
+ margin:0px !important;
+    }
+ .mrgn_txt {
+ border-bottom: 1px solid #fff; 
+        }
+    .search{
+        background: transparent;
+float: right;
+box-shadow: none;
+color: #fff;
+text-shadow: none;
+position: absolute;
+right: 0;
+padding: 0px;
+margin: 0px;
+height: 30px;
+width: 30px;
+top: -4px;
+
+img{
+ width: 19px !important;
+height: 19px;
+line-height: 30px;
+display: block;
+vertical-align: middle;
+}
+     }
+
+ .current{
+background-color: #666666;
+    }
+    
+.btns{
+	color: #fff;
+font-weight: normal;
+font-size: 12px;
+border-radius: 50px;
+float: right;
+width: auto;
+padding: 5px 20px;
+margin: 8px 0 0 0;
+
+    }
+    .pading_zro {
+        
+            padding-bottom: 6px !important;
+        
+        }
+}
+	.servicesbx{
+		margin-bottom: 20px;
+		width:100%;
+		float: left;
+		h1{font-size: 20px;color: #8d8d8d;font-weight: normal;}
+		}
+
+	.repairsbx{
+        ion-scroll {
+        
+         height: 154px;
+        overflow-x: scroll;
+        width: 100%;
+       white-space: nowrap;
+        }
+        .scroll-content{height: auto;    padding: 0 !important;margin-top: 15px;}
+		margin-bottom: 25px;
+		width:100%;
+		float: left;
+		h1{font-size: 20px;color: #8d8d8d;font-weight: normal; width: 83%; float: left; margin: 0;}
+		span{color:#05a499; cursor: pointer;}
+
+ion-card {
+    img{width: 80px;
+    height: 80px;}
+	h1{font-size: 11px;
+    text-align: center;
+    width: 100%;
+    min-height: 30px;
+    margin: 10px 0 0 0;}
+    display: inline-block;
+    width: 30%;
+    margin: 0 4px 0 0;
+    box-shadow: none;
+
+  .card-content-md {
+    padding: 0;
+    border: none;
+    margin: 0;
+                    }
+
+
+
+    }
+	
+			
+	       }
+
+               
+	.button-md:hover:not(.disable-hover) {
+    background-color: #666666;
+}
+
+.signup_form {
+    
+    .item{
+        padding:0px 5px;
+         margin-bottom: 0px;
+    min-height: 0px;
+    
+        .item-inner{
+    padding-right: 0px;
+    line-height: 22px;
+        
+    .input-wrapper {
+    font-size: 1.4rem;
+            .select{
+            margin: 0px;
+             }
+        ion-label{
+            margin: 0px;
+            width: 100%;
+            float: left;
+            font-size: 1.4rem !important;
+            }
+         }
+}
+    }
+}
+
+}
+/*.searchbar-search-icon {
+    left: 13px;
+    top: 12px;
+    background-image: url(/assets/imgs/search2.png);
+    width: 30px;
+    height: 30px;
+    display: block;
+    }
+
+    .searchbar-input{
+    padding: 4px 51px;
+    border-radius: 0px !important; 
+        margin-bottom: 17px;
+        box-shadow: none !important;
+
+   
+  
+}
+.searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel {
+  
+    background-size: 20px;
+}
+
+ion-searchbar {
+
+    padding: 0 !important;
+}
+
+.toolbar .searchbar-ios .searchbar-input {
+  
+    margin-bottom: 3px;
+    background: #fff;
+}
+
+.toolbar-ios-theme .searchbar-ios .searchbar-search-icon {
+    background-image: none; 
+    color: #000;
+    padding: 0;
+    margin-top: 3px;
+}
+
+.toolbar .searchbar-ios {
+   
+    background: transparent;
+    padding: 0 !important;
+    margin: 0;
+    box-shadow: unset;
+    min-height: unset;
+    }
+*/
+    
+.tabs-md .tabbar {
+    background: #282828;
+}
+.tabs-md .tab-button {
+      background: #6b6b6b;;
+    color: #02a499;
+}
+.tabs-md .tab-button-icon{
+    color: rgba(255, 255, 255, 1);
+}
+.tabs-md .tab-button[aria-selected="true"] {
+background: #02a499;
+    color: #fff;
+
+    
+}
+.tabs-md .tab-button[aria-selected="true"] .tab-button-icon {
+    background: #d4af37;
+   
+    }
+
+.tabs-md .tab-button[aria-selected="true"] .tab-button-text{
+ font-size: 9px;
+}
+
+.padding0{padding: 0;}   
+
+
+
+ion-icon.tab-button-icon.icon.icon-ios.ion-ios-one{
+    background: url("../assets/imgs/home.png") no-repeat;
+       background-size: 85%;
+        background-position: center center;
+}
+ion-icon.tab-button-icon.icon.icon-ios.ion-ios-two{
+    background: url("../assets/imgs/notepad1.png") no-repeat;
+       background-size: 75%;
+        background-position: center center;
+}
+ion-icon.tab-button-icon.icon.icon-ios.ion-ios-three{
+    background: url("../assets/imgs/person1.png") no-repeat;
+       background-size: 74%;
+        background-position: center center;
+
+
+}
+ion-icon.tab-button-icon.icon.icon-ios.ion-ios-four{
+    background: url("") norepeat;
+       background-size: 85%;
+        background-position: center center;
+}
+
+
+
+
+
+
+ion-icon.tab-button-icon.icon.icon-ios.ion-ios-one-outline{
+    background: url("../assets/imgs/home.png") no-repeat;
+        background-size: 85%;
+         background-position: center center;
+}
+ion-icon.tab-button-icon.icon.icon-ios.ion-ios-two-outline{
+    background: url("../assets/imgs/notepad1.png") no-repeat;
+        background-size: 75%;
+         background-position: center center;
+}
+
+ion-icon.tab-button-icon.icon.icon-ios.ion-ios-three-outline{
+    background: url("../assets/imgs/person1.png") no-repeat;
+        background-size: 74%;
+         background-position: center center;
+}
+
+ion-icon.tab-button-icon.icon.icon-ios.ion-ios-four-outline{
+    background: url("../assets/imgs/chat.png") no-repeat;
+       background-size: 85%;
+        background-position: center center;
+}
+
+
+
+
+
+.tabs-ios .tabbar {
+    border-top: 0.55px solid rgba(0, 0, 0, 0.3);
+    background: #282828;
+}
+ .tabs-ios .tab-button[aria-selected=true] {
+   background: #02a499;
+    color: #fff;
+}
+.tabs-ios .tab-button
+{
+      background: #6b6b6b;;
+    color: #02a499;
+}
+.tabs-md .tab-button-icon
+{
+
+    height: 28px;
+}
+.tabs-ios .tab-button-icon
+{
+
+    height: 38px;
+}
+ion-icon.tab-button-icon.icon.icon-md.ion-md-one{
+    background: url("../assets/imgs/home.png") no-repeat;
+       background-size: 85%;
+        background-position: center center;
+}
+.tab-button-icon.icon.icon-md.ion-md-two{
+    background: url("../assets/imgs/notepad1.png") no-repeat;
+       background-size: 75%;
+        background-position: center center;
+}
+ion-icon.tab-button-icon.icon.icon-md.ion-md-three{
+    background: url("../assets/imgs/person1.png") no-repeat;
+       background-size: 74%;
+        background-position: center center;
+
+
+}
+ion-icon.tab-button-icon.icon.icon-md.ion-md-four{
+    background: url("../assets/imgs/chat.png") no-repeat;
+       background-size: 85%;
+        background-position: center center;
+}
+
+
+
+
+
+
+ion-icon.tab-button-icon.icon.icon-md.ion-md-one-outline{
+    background: url("../assets/imgs/home.png") no-repeat;
+        background-size: 85%;
+         background-position: center center;
+}
+ion-icon.tab-button-icon.icon.icon-md.ion-md-two-outline{
+    background: url("../assets/imgs/notepad1.png") no-repeat;
+        background-size: 75%;
+         background-position: center center;
+}
+
+ion-icon.tab-button-icon.icon.icon-md.ion-md-three-outline{
+    background: url("../assets/imgs/person1.png") no-repeat;
+        background-size: 74%;
+         background-position: center center;
+}
+
+ion-icon.tab-button-icon.icon.icon-md.ion-md-four-outline{
+    background: url("../assets/imgs/chat.png") no-repeat;
+       background-size: 85%;
+        background-position: center center;
+}
+
+
+
+.tabs-ios .tabbar {
+    border-top: 0.55px solid rgba(0, 0, 0, 0.3);
+    background: #282828;
+}
+ .tabs-ios .tab-button[aria-selected=true] {
+    background: #02a499;
+    color: #fff;
+}
+
+.picker-toolbar{
+    .picker-button
+    {
+        span{
+            color: #017a72;
+        }
+    }
+}
+/* color and backgroung color of all radio button and calender */
+.alert-button { 
+    color: #02a499 !important;  }
+
+.radio-md .radio-inner{background-color: #02a499;}
+.radio-md .radio-checked {
+    border-color: #02a499;
+}
+
+.item-radio-checked.item-md ion-label {
+    color: #02a499;
+}
+
+.picker-md .picker-opt.picker-opt-selected {
+    color: #02a499;
+}
+
+
+.text-input::-moz-placeholder {
+    color:  #494949;
+}
+
+
+.text-input::-ms-input-placeholder {
+color:  #494949;
+}
+
+.text-input::-webkit-input-placeholder {
+text-indent: 0;
+color:  #494949;
+}
+
+.button-inner::-ms-input-placeholder {
+color:  #8c8c8c;
+}
+
+.tab-button-text {
+    margin-top: 6px !important;
+    margin-bottom: 0;
+}

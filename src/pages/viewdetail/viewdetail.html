@@ -1,0 +1,81 @@
+<!--
+  Generated template for the ViewdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    
+    <ion-title>SERVICE PROVIDER DETAIL</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<div class="detail">
+		<!--<h2>{{providerInfo.firstname}} {{providerInfo.lastname}}</h2>-->
+                
+		<div class="form-sec">
+
+		
+  					
+		<ion-label ><span>Distance</span>{{providerInfo.distance}} Kilometers</ion-label>
+		<ion-label ><span>Provider type</span>{{providerInfo.provider_type}}</ion-label>
+		
+		<ion-label *ngIf="providerInfo.companyname != ''"><span>Company name</span>{{providerInfo.companyname}}</ion-label>	
+		<ion-label ><span>Profession</span>{{providerInfo.profession}}</ion-label>
+		<ion-label ><span>Course</span>{{providerInfo.course}}</ion-label>
+		<ion-label ><span>Year of graduation</span>{{providerInfo.c_year}}</ion-label>
+		<ion-label ><span>Years of experience</span>{{providerInfo.work_exp}}</ion-label>
+              <ion-label ><span>Charge rate{{providerInfo.pertype}}</span> {{providerInfo.rate}}</ion-label>		
+              <ion-label ><span>Avg. work rating</span>
+			  <rating [(ngModel)]="providerInfo.ratings" readOnly="true" max="5"></rating>
+			  </ion-label>
+	</div>
+
+<!--button *ngIf="converstaion!=0" ion-button  round full class="btns" color="theme" (click)="map(providerInfo.id)" >
+	SEE LOCATION     
+</button>
+
+<button *ngIf="converstaion!=0" ion-button  round full class="btns" color="theme" (click)="chatbx(providerInfo.id)" >
+	WANT TO CHAT    
+</button-->
+
+
+
+
+  <!--div class="form-sec" *ngIf="converstaion==0">
+    <h3>You are not able to see the information about the provider untill provider accepts your service request.</h3>
+  </div-->
+</div>
+
+<!--     <ion-grid no-padding>
+               <ion-row>
+                   <ion-col col-12>
+                        <ion-icon (click)="chatbx(providerInfo.id)" class="chat" name="chatboxes"></ion-icon>
+                   </ion-col>
+               </ion-row>
+     </ion-grid>-->
+	 
+	 <div class="notice">
+	 <ion-grid no-padding>
+	 <ion-row>
+	 <ion-col col-12>
+
+<h5>Important note: </h5>
+</ion-col>
+<ion-col col-12>
+<p>The identity of the Service Provider and related contact details, copies of documents and other important information will be shown to you once the Service Provider has accepted your job offer and you have paid ya-kazi service fees.</p>
+</ion-col>
+
+
+</ion-row>
+</ion-grid>
+</div>
+<button class="feesbtn" ion-button block round type="submit" color="theme" (click)="gotofees()">VIEW ya-kazi FEES</button>
+</ion-content>
+ 

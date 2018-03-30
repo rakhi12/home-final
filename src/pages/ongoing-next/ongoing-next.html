@@ -1,0 +1,205 @@
+<ion-header>
+
+  <ion-navbar padding>
+      <!--<ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back" (click)="back()"></ion-icon>-->
+    <ion-title class="header-title">Provider Detail</ion-title>
+  </ion-navbar>
+    
+</ion-header>
+
+<ion-content padding>
+<div class="srvce_dtl" >
+  <div class="srvc_ttl">
+    <h3>Service Detail</h3>
+  </div>
+  <div class="text_dtl">
+    <div *ngFor="let item of items">
+       <h3 *ngFor="let sitem of item.Request.Services" (click)="service_detail(sitem.Service.id)">{{sitem.Service.name}}</h3>
+    </div>
+    
+    <!--h4 class="ttl_sb">Total - KES {{price}}</h4>
+    <h6>Schedule Date - {{sdate}} ({{stime}})</h6--> 
+	
+	<h4 class="ttl_sb">Job location</h4>
+	<h6>{{joblocation}}</h6>
+	
+	 <h4 class="ttl_sb">Deposit paid</h4>
+	<h6>KES {{price}}</h6>
+	
+	 <h4 class="ttl_sb">Date of first meeting/discussion</h4>
+	<h6>{{sdate}} (between {{stime}})</h6>
+	
+	
+  </div>
+</div>
+
+<div class="prvdr_dtl">
+  <div class="prvdr_ttl">
+    <h3>Service Provider Details</h3>
+  </div>
+  <div class="text_prvdr">
+   
+  <div class="pic_stnd">
+      <img src="{{udata.image}}"> 
+  </div>
+    <div class="nme_stnd"><h2>Name:</h2><span>{{udata.firstname}} {{udata.lastname}}</span></div>
+    <div class="nme_stnd"><h2>Email:</h2><span>{{udata.email}}</span></div>
+    <div class="nme_stnd"><h2>Phone Number:</h2><span>{{udata.phonenumber}}</span></div>
+    <div class="nme_stnd"><h2>Address:</h2><span>{{udata.address}}</span></div>
+    <div class="nme_stnd"><h2>Postal address:</h2><span>{{udata.postal}}</span></div>
+	<div class="nme_stnd"><h2>Provider type:</h2><span>{{udata.provider_type}}</span></div>
+	<div class="nme_stnd"><h2>Profession:</h2><span>{{udata.profession}}</span></div>
+	<div class="nme_stnd"><h2>Passport no:</h2><span>{{udata.passport_no}}</span></div>
+	<div class="nme_stnd"><h2>Institution:</h2><span>{{udata.institution}}</span></div>
+	<div class="nme_stnd"><h2>Course:</h2><span>{{udata.course}}</span></div>
+	<div class="nme_stnd"><h2>Past work references:</h2><span>{{udata.pastworkreferences}}</span></div>
+	<div class="nme_stnd"><h2>Other info:</h2><span>{{udata.otherinfo}}</span></div>
+	<div class="nme_stnd" *ngIf="udata.companyname != ' '"><h2>Company name:</h2><span>{{udata.companyname}}</span></div>
+	<div class="nme_stnd"><h2>Avg rating:</h2><span>{{udata.avg_rating}}</span></div>
+	<div class="nme_stnd"><h2>Work Exp(years):</h2><span>{{udata.work_exp}}</span></div>
+
+  </div>
+</div>
+
+
+<div class="providercerti" *ngIf="udocdata?.length">
+<h3>Provider Documents</h3>
+<ion-item class="upld">
+   <div class="label" *ngIf="types.c != ''">National ID/Passport</div> 
+  <!--<input id="file-input" (click)="openActionSheet()">-->
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'National ID/Passport'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'National ID/Passport'" src="{{im.Userdoc.image}}" />
+      <!--<img *ngIf="im.Userdoc.image == ''" src="" />-->
+    </div>
+  </div>
+
+  
+  
+</ion-item>
+
+
+<ion-item class="upld">
+   <div class="label" *ngIf="types.d != ''">Recent Passport Photo</div> 
+  <!--<input id="file-input" (click)="openActionSheet()">-->
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Recent Passport Photo'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Recent Passport Photo'" src="{{im.Userdoc.image}}" />
+      <!--<img *ngIf="im.Userdoc.image == ''" src="" />-->
+  </div>
+  </div>
+
+  
+  
+</ion-item>
+
+
+<ion-item class="upld">
+     <div class="label" *ngIf="types.b != ''">Work Permit/License</div>
+  <!--<input id="file-input" (click)="openActionSheet()">-->
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Work Permit/License'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Work Permit/License'" src="{{im.Userdoc.image}}" />
+      <!--<img *ngIf="im.Userdoc.image == ''" src="" />-->
+  </div>
+  </div>
+
+ 
+  
+</ion-item>
+
+
+<!--ion-item class="upld">
+   <div class="label">Insurance Cover</div> 
+
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Insurance Cover'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Insurance Cover'" src="{{im.Userdoc.image}}" />
+      
+  </div>
+  </div>
+
+  
+  
+</ion-item>
+
+<ion-item class="upld">
+  <div class="label">Certificate of Good Conduct</div>  
+ 
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Certificate of Good Conduct'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Certificate of Good Conduct'" src="{{im.Userdoc.image}}" />
+     
+  </div>
+  </div>
+
+  
+  
+</ion-item-->
+
+<ion-item class="upld">
+  <div class="label" *ngIf="types.a != ''">Work Insurance Certificate and  Certificate of Good Conduct</div>  
+  <!--<input id="file-input" (click)="openActionSheet()">-->
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Work Insurance Certificate and  Certificate of Good Conduct'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Work Insurance Certificate and  Certificate of Good Conduct'" src="{{im.Userdoc.image}}" />
+      <!--<img *ngIf="im.Userdoc.image == ''" src="" />-->
+  </div>
+  </div>
+
+  
+  
+</ion-item>
+
+
+<ion-item class="upld">
+   <div class="label" *ngIf="types.e != ''">College Leaving Certificate</div>  
+  <!--<input id="file-input" (click)="openActionSheet()">-->
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'College Leaving Certificate'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'College Leaving Certificate'" src="{{im.Userdoc.image}}" />
+      <!--<img *ngIf="im.Userdoc.image == ''" src="" />-->
+  </div>
+  </div>
+
+ 
+  
+</ion-item>
+
+<ion-item class="upld">
+    <div class="label" *ngIf="types.f != ''">Professional/Course Certificates</div>
+  <!--<input id="file-input" (click)="openActionSheet()">-->
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Professional/Course Certificates'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'Professional/Course Certificates'" src="{{im.Userdoc.image}}" />
+      <!--<img *ngIf="im.Userdoc.image == ''" src="" />-->
+  </div>
+  </div>
+
+  
+  
+</ion-item>
+<ion-item class="upld">
+    <div class="label" *ngIf="types.g != ''">My work tools/equipment/vehicles</div>
+  <!--<input id="file-input" (click)="openActionSheet()">-->
+  <div *ngFor="let im of udocdata">
+    <div class="inimg" *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'My work tools/equipment/vehicles'">
+    <img *ngIf="im.Userdoc.image != '' && im.Userdoc.type == 'My work tools/equipment/vehicles'" src="{{im.Userdoc.image}}" />
+      <!--<img *ngIf="im.Userdoc.image == ''" src="" />-->
+  </div>
+  </div>
+
+  
+  
+</ion-item>
+</div>
+
+
+
+<div class="map_lcte">
+  <div id="maps"></div>
+</div>
+
+</ion-content>
+
+

@@ -1,0 +1,96 @@
+<!--
+  Generated template for the AddressPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title >MORE LOCATION DETAILS</ion-title>
+  </ion-navbar>
+ <ion-toolbar>
+    <ion-title>Give more specific work location details <br>to guide service providers</ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+
+<ion-content padding>
+
+	<div class="textbx">
+		<h1>Location of work</h1>
+		<p>{{location}}</p>
+</div>
+
+
+<form #heroForm="ngForm"novalidate class="inputbox">
+<ion-list>
+
+ <ion-item>
+    <ion-label floating>Describe the work you want done</ion-label>
+    <ion-textarea  [(ngModel)]="data.job_description" name="job_description" type="text" id="job_description"  #job_description="ngModel" required></ion-textarea>
+	<div *ngIf="job_description.errors && (job_description.dirty || job_description.touched)" class="alert alert-danger">
+    <div [hidden]="!job_description.errors.required" class="alert alert-danger">
+      Job description is required
+    </div>
+    </div>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Type of site (office, house, etc)</ion-label>
+    <ion-input  [(ngModel)]="data.optionalname" name="optionalname" type="text" id="optionalname" required #optionalname="ngModel"></ion-input>
+
+    <div *ngIf="optionalname.errors && (optionalname.dirty || optionalname.touched)" class="alert alert-danger">
+    <div [hidden]="!optionalname.errors.required" class="alert alert-danger">
+      Type of site is required
+    </div>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Describe the area, e.g. name of estate</ion-label>
+    <ion-input  [(ngModel)]="data.area" name="area" type="text" id="area" required #area="ngModel"></ion-input>
+
+    <div *ngIf="area.errors && (area.dirty || area.touched)" class="alert alert-danger">
+    <div [hidden]="!area.errors.required" class="alert alert-danger">
+      Physical location is required
+    </div>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Describe the site, e.g. house no.</ion-label>
+    <ion-input  type="text" name="house" id="house" [(ngModel)]="data.house" #house="ngModel" required></ion-input>
+</ion-item>
+<ion-label>
+    <div *ngIf="house.errors && (house.dirty || house.touched)" class="alert alert-danger">
+    <div [hidden]="!house.errors.required" class="alert alert-danger">
+      Describe the site is required
+    </div>
+    </div>
+	</ion-label>
+  
+  <!--<ion-item>
+    <ion-label floating>Nearest landmark</ion-label>
+    <ion-input  [(ngModel)]="data.landmark" name="landmark" type="text" id="landmark" (input)="updateSearch()" #landmark="ngModel" required></ion-input>
+	<div *ngIf="landmark.errors && (landmark.dirty || landmark.touched)" class="alert alert-danger">
+    <div [hidden]="!landmark.errors.required" class="alert alert-danger">
+      Landmark is required
+    </div>
+    </div>
+  </ion-item>
+  <ion-item *ngFor="let item of autocompleteItems" (click)="chooseItem(item)">{{ item.description }} </ion-item>-->
+ <ion-item>
+    <ion-label floating>Nearest landmark, e.g. well known building</ion-label>
+    <ion-input  [(ngModel)]="data.landmark" name="landmark" type="text" id="landmark"  #landmark="ngModel" required></ion-input>
+	<div *ngIf="landmark.errors && (landmark.dirty || landmark.touched)" class="alert alert-danger">
+    <div [hidden]="!landmark.errors.required" class="alert alert-danger">
+      Landmark is required
+    </div>
+    </div>
+  </ion-item>
+
+
+  
+</ion-list>
+<button ion-button block round type="submit" color="theme" [disabled]="!heroForm.form.valid" (click)="useraddress(heroForm)">NEXT</button>
+</form>
+</ion-content>

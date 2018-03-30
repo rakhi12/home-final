@@ -1,0 +1,98 @@
+<!--
+  Generated template for the ServiceproviderlistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>LIST OF SERVICE PROVIDERS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<div class="chklist">
+<p *ngIf="providers?.length">List of service providers who match your search and criteria. Choose one to continue.</p>
+<h6 *ngIf="providers?.length">Displays only those who are available on the day and time you have scheduled to meet/talk.</h6>
+<div class="noDataFound" *ngIf="!providers?.length">There is no service provider available for your selected date/time!</div>
+<form #heroForm="ngForm"novalidate class="signup_form">
+
+
+
+
+<div class="list-outer">
+
+  
+   <ion-list radio-group [(ngModel)]="data.selectprovider" name="selectprovider"  required #selectprovider="ngModel"  class="provdr-lst rdiobtn">
+       <ion-item *ngFor="let list of providers">
+ 
+      <ion-label>
+          <ion-grid no-padding><ion-row><ion-col col-12>
+             <div class="usrchked">
+            <ion-radio value="{{list.User.id}}-{{list.User.services}}-{{list.User.total_price}}" item-start ></ion-radio>
+                </div>
+          	
+      	<!--<div  class="user-avatar">
+            <div class="proflimg">
+      		<img src="{{list.User.image}}" alt="Avatar">
+            </div>
+      	</div>-->
+      	<div class="user-details" (click)="viewprovider(list.User.id,list.User.distance)">
+      	<!--<h2>{{list.User.firstname}} {{list.User.lastname}}</h2>-->
+          	<div class="dstnc_red"><h6 class="bld_nne">Current distance of service provider from your work location: {{list.User.distance}} Kilometers</h6></div>
+            <div class="dstnc_red" *ngIf="list.User.provider_type == 'company'"><h2>Company Name:</h2><h6 class="bld_nne"> {{list.User.companyname}}</h6></div>
+            <div class="dstnc_red"><h2>Qualification:</h2><h6 class="bld_nne"> {{list.User.otherinfo}}</h6></div>
+           <div class="dstnc_red"><h2>Years of experience:</h2><h6 class="bld_nne"> {{list.User.work_exp}}</h6></div>
+		   <div class="dstnc_red"><h2>Average work rating by other customers:</h2><h6 class="bld_nne"> {{list.User.avg_rating}} out of 5</h6></div>
+		   <div class="dstnc_red"><h2>Charge rate {{list.User.pertype}}:</h2><h6 class="bld_nne">Kshs. {{list.User.rate}}</h6></div>
+        <!--<p>-->
+            <!--<ion-ratings index = '4' max="5" read-only></ion-ratings>-->
+           
+<h6 class="more">CLICK TO VIEW MORE</h6>
+        </div> 
+
+          </ion-col>
+                  <!--<ion-col col-2>
+                      <ion-icon (click)="chatbx(list.User.id)" class="chat" name="chatboxes"></ion-icon></ion-col>-->
+                      
+                      
+                      
+                      </ion-row></ion-grid>
+          
+<!--           <ion-grid no-padding>
+               <ion-row>
+                   <ion-col col-12>
+                        <ion-icon (click)="chatbx(list.User.id)" class="chat" name="chatboxes"></ion-icon>
+                   </ion-col>
+               </ion-row>
+     </ion-grid>-->
+  	</ion-label> 
+         
+      </ion-item>
+
+      </ion-list>
+
+    
+ 
+</div>
+
+<button class="prvbtn" *ngIf="providers?.length" ion-button block round type="submit" color="theme"  (click)="confirm(heroForm)">SEND REQUEST TO SERVICE PROVIDER</button>
+<span class="or">OR</span> 
+<button  class="prvbtn" *ngIf="providers?.length" ion-button block round type="submit" color="theme"  (click)="gotohome()">MAKE NEW SEARCH</button>
+
+
+
+</form>
+</div>
+<!--  <ion-grid no-padding>
+               <ion-row>
+                   <ion-col col-12>
+                        <ion-icon (click)="chatbx()" class="chat" name="chatboxes"></ion-icon>
+                   </ion-col>
+               </ion-row>
+           </ion-grid>-->
+</ion-content>

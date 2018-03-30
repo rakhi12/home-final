@@ -1,0 +1,105 @@
+page-location {
+
+.plzz_sms{
+width:100%;
+float:left;
+}
+.btn_requrd {
+    width: 100%;
+    float: left;
+}
+
+.loclist{
+position:relative;
+overflow:hidden;
+
+.clzicn {
+position: absolute;
+color: red;
+top: 48px;
+right: 6px;
+z-index: 10;
+font-size: 20px;
+}
+}
+
+
+.btnlog{
+    background-color: #47ae99;
+    width: 100%;
+    border-radius: 24px;
+}
+.btnsnxt{
+color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+width: 100%;
+margin-left: 0;
+}
+
+.btn_onnt {
+    border-radius: 50px;
+    background: #666666;
+    color: #fff;
+	font-size: 12px;
+width: 87%;
+margin-left: 2px;
+margin-bottom: 10px;
+}
+.btn_onnt:hover:not(.disable-hover) {
+    background-color: #02a499;
+}
+
+#map{width:100%; height: 450px; margin-top:12px;}
+	.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-align:center;}
+	.back-button{color:#02a499;}
+
+	.current{
+		background-color: #616363;
+	}
+	.btns{
+	color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+
+	}
+	form{
+
+	.item {
+	padding: 0 !important;
+	}
+	}
+	
+	ion-label{
+	white-space: normal;
+	overflow: visible;
+	}
+
+}
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child{
+
+	box-shadow: none;
+	border-bottom-color: #02a499;
+}
+
+.signup_form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000 !important;
+  opacity: 1 !important;
+  
+}
+.select-placeholder {
+color: #000 !important;
+  opacity: 1 !important;
+}
+.signup_form ::-moz-placeholder { /* Firefox 19+ */
+  color: #000 !important;
+  opacity: 1 !important;
+}
+.signup_form :-ms-input-placeholder { /* IE 10+ */
+  color: #000 !important;
+  opacity: 1 !important;
+}
+.signup_form :-moz-placeholder { /* Firefox 18- */
+  color: #000 !important;
+  opacity: 1 !important;
+}

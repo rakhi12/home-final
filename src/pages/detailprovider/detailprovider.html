@@ -1,0 +1,75 @@
+<!--
+  Generated template for the DetailproviderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+<!--      <button  class="backbtn" (click)="back()" float-left>
+          <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+      </button>-->
+    <ion-title>DETAIL PROVIDER</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form #detailForm="ngForm" novalidate>
+<ion-grid>
+  <ion-row>
+      <ion-col col-4>
+        <div class="usr_pro">
+            <img src="{{this.img}}">
+        </div>
+      </ion-col>
+      
+      <ion-col col-8>
+          <div class="usr_txxt">
+              <h3>{{this.name}}</h3>
+              <!--<p>Lorem ipsum is a dummy text<span class="twnt_txt">($20.00)</span></p>-->
+              <p>{{this.name1}}<span class="twnt_txt">(${{this.amount1}})</span></p>
+              <p>Schedule Day<br/><span class="twnt_txt">{{order}}</span></p>
+        </div>     
+      </ion-col>
+  </ion-row>
+</ion-grid>
+    <div class="spacer"></div>
+    <div class="write_rvw">
+        <div class="hding_rvw">
+            <h3>Write A Review</h3>      
+        </div>
+        <ion-grid>
+  <ion-row>
+      <ion-col col-12>
+          <div class="star_sctin">
+              <rating [(ngModel)]="data.jobstar" name="jobstar"></rating> 
+<!--              <ul>
+                  <li>  <ion-icon name="star"></ion-icon></li>
+                <li>  <ion-icon name="star"></ion-icon></li>
+                <li>  <ion-icon name="star"></ion-icon></li>
+                <li>  <ion-icon name="star"></ion-icon></li>
+                <li>  <ion-icon name="star"></ion-icon></li>
+              </ul>-->
+        </div>
+      </ion-col>
+  </ion-row>
+            <ion-row>
+      <ion-col col-12>
+          <div class="write_txt">
+              
+              <textarea rows="4" cols="33"   [(ngModel)]="data.comment" name="comment" type="text" id="comment" required #comment="ngModel">
+          Rate this job
+</textarea> 
+        </div>  
+         <button ion-button color="light" class="current btns" round (click)="goDetail(detailForm)" [disabled]="!detailForm.form.valid">Submit</button>
+          
+      </ion-col>
+  </ion-row>
+</ion-grid>
+        
+    </div>
+    </form>
+</ion-content>

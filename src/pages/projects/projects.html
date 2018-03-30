@@ -1,0 +1,393 @@
+<!--
+  Generated template for the ProjectsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>MY JOBS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<!--<ion-content padding>
+
+<div class="projects">
+<h1>History</h1>
+<div class="nodata" *ngIf="!orderlist?.length"><img src="assets/imgs/NoDataAvailable.png"></div>
+<div class="box" *ngFor="let list of orderlist">
+<ion-list> 
+  
+    <ion-item item-start (click)="abcd(list.Order.providerid,list.Order.id,itemlist.id,list.Order.amount,itemlist.name)" *ngFor="let itemlist of list.OrderItem" >
+     <ion-grid>
+        <ion-row>  <ion-col col-3><ion-avatar >
+        <img src={{itemlist.image}}>
+    </ion-avatar></ion-col>
+                      <ion-col col-9>
+                         <h2 >{{itemlist.name}}</h2>
+    <h3 >{{list.Give_Review}}</h3>
+    <h3>{{list.Order.schedule_date}} {{list.Order.schedule_time}}<span>${{list.Order.amount}}</span></h3>    
+                </ion-col>
+        </ion-row>
+    </ion-grid>
+
+  </ion-item>
+</ion-list>
+</div>
+
+
+
+</div>
+
+</ion-content>-->
+
+<ion-content >
+
+	<div class="segmentheader">
+  <ion-segment [(ngModel)]="activeTab">
+      <ion-segment-button value="all" (click)="list_requested()">
+      Pending
+    </ion-segment-button>
+    <ion-segment-button value="active" id="active" (click)="list_active()">
+      Active
+    </ion-segment-button>
+
+
+    <ion-segment-button value="completed" id="completed" (click)="list_completed()">
+     Completed
+    </ion-segment-button>
+     <ion-segment-button id="cancelled" value="cancelled" (click)="list_cancelled()">
+     Cancelled
+    </ion-segment-button>
+     <!--<ion-segment-button value="rescheduled" (click)="list_rescheduled()">
+     Rescheduled
+    </ion-segment-button>-->
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="activeTab" class="tabbing" padding>
+
+
+
+  <ion-list *ngSwitchCase="'all'" class="list1">
+    <div class="nodata" *ngIf="!itemsr?.length"><img src="assets/imgs/NoDataAvailable.png"></div>
+     <div class="box" *ngFor="let item of itemsr">
+    <div class="main_box" *ngFor="let ite of item">
+      <ion-list class="nne_slde">
+        <ion-item *ngFor="let serviceitem of ite.Services" class="brdr_nne">
+          <h5 class="getservice">{{serviceitem.Service.name}} </h5>
+        </ion-item>
+      </ion-list>
+    </div>
+     <h6>Schedule Date - {{item[0].scheduledate}} ({{item[0].scheduletime}})</h6>
+    
+	<ion-grid class="elctricdata" no-padding>
+	<ion-row>
+	<ion-col col-6>
+	<label>Distance:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.distance}} kilometers away</h3> 
+	</ion-col>        
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Provider type:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.provider_type}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Profession:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.profession}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Course:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.course}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Year of graduation:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.c_year}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Year of experience:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.work_exp}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Charge rate{{item[0].User.User.pertype}}:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.rate}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Average work rating:</label>
+	</ion-col>
+	<ion-col col-6>
+	<rating [(ngModel)]="item[0].User.User.avg_rating" readOnly="true" max="5"></rating>
+	</ion-col>
+	</ion-row>
+	</ion-grid>
+	
+	<div class="after_active" *ngIf="item[0].paid == 0 && item[0].status == 1">
+	<p class ="staticnote">The Service Provider is ready to discuss your job. Please make your service fee payment in order to:</p>
+	<p>1. View the Service Provider's identity, location and other professional data.</p>
+	<p>2. Chat directly with Service Provider.</p>
+   <p> 3. Share with the Service Provider the location of the work you want done.</p>
+	<p>Our service fee is KES {{item[0].Services[0].Service.price}}</p>
+	</div>
+	<div class="before_active" *ngIf="item[0].paid == 0 && item[0].status == 0">
+	Note: Give the Service Provider time to respond. If Service Provider is taking longer then you can wait to respond, you may select another Service Provider.
+	</div>
+		<div class="pndng_btn">
+			<button ion-button block round color="theme" [ngClass]="item[0].paid == 0 ? 'largebtn' : 'current btns'" *ngIf="item[0].paid == 0 && item[0].status == 0" (click)="gotoproviderlist(item[0].requested_serviceids,item[0].provider_type,item[0].scheduledate,item[0].scheduletime)">REQUEST ANOTHER SERVICE PROVIDER</button>
+				<button ion-button block round color="theme" [ngClass]="item[0].paid == 0 ? 'largebtn' : 'current btns'" *ngIf="item[0].paid == 0 && item[0].status == 0" (click)="gotohome()">CHANGE SEARCH CRITERIA</button>
+	<button ion-button block round color="theme" [ngClass]="item[0].paid == 0 ? 'largebtn' : 'current btns'" *ngIf="item[0].paid == 0 && item[0].status == 1" (click)="makePayment(item[0].session_id)">PROCEED</button>
+</div>
+	</div>
+  </ion-list>
+
+
+
+  <ion-list *ngSwitchCase="'active'" class="list1">
+    <div class="nodata" *ngIf="!items?.length"><img src="assets/imgs/NoDataAvailable.png"></div>
+     <div class="box" *ngFor="let item of items">
+	 <div class="clickable" (click)="item[0].paid == 1 ? nxt_ogo(item[0].session_id,item[0].provider_id) : null">
+    <div class="main_box" *ngFor="let ite of item">
+      <ion-list class="nne_slde">
+        <ion-item *ngFor="let serviceitem of ite.Services" class="brdr_nne">
+          <h5>{{serviceitem.Service.name}} </h5>
+        </ion-item>
+      </ion-list>
+    </div>
+	<!--h4 class="ttl_sb">Service Fee - KES {{item[0].Services[0].Service.provider_price}}</h4>
+	<h4 class="ttl_sb">Work deposit - KES {{item[0].Services[0].Service.deposite}}</h4>
+    <h4 class="ttl_sb">Total - KES {{item[0].Services[0].Service.price}}</h4>
+     <h6>Schedule Date - {{item[0].scheduledate}} ({{item[0].scheduletime}})</h6-->
+	 
+	<h4 class="ttl_sb">Service Provider name</h4>
+	<h6>{{item[0].User.User.firstname}} {{item[0].User.User.lastname}}</h6>
+	
+	<h4 class="ttl_sb">Job location</h4>
+	<h6>{{item[0].location}}</h6>
+	
+	 <h4 class="ttl_sb">Deposit paid</h4>
+	<h6>{{item[0].Services[0].Service.price}}</h6>
+	
+	
+	 <h4 class="ttl_sb">Date of first meeting/discussion</h4>
+	<h6>{{item[0].scheduledate}} (between {{item[0].scheduletime}})</h6>
+	 
+	 
+	 </div>
+	<div class="pndng_btn">
+	<button ion-button block round color="theme" class="current btns" *ngIf="item[0].paid == 1" (click)="nxt_ogo(item[0].session_id,item[0].provider_id)">VIEW JOB<br>DETAILS</button>
+	<button ion-button block round color="theme" class="current btns" *ngIf="item[0].paid == 1" (click)="rqstcompleted(item[0].session_id,item[0].user_id)">MOVE JOB TO<br>COMPLETED</button>
+    <button ion-button block round color="theme" class="current btns" *ngIf="item[0].paid == 1" (click)="chat(item[0].provider_id)">CHAT WITH<br>PROVIDER</button>	
+    <button ion-button block round color="theme" class="btm_lrg" (click)="pop(item[0].provider_id,item[0].session_id,item[0].Services[0].Service.deposite)" *ngIf="item[0].paid == 1 && item[0].out_cancel == 0 && item[0].within_24_hours == 1">CANCEL THIS JOB</button>
+    <button ion-button block round color="theme" class="btm_lrg" (click)="pops(item[0].provider_id,item[0].session_id,item[0].Services[0].Service.deposite,item[0].percentage)" *ngIf="item[0].paid == 1 && item[0].out_cancel == 0 && item[0].within_24_hours == 0">CANCEL THIS JOB</button>
+    
+	</div>
+    </div>
+	<span *ngIf="items?.length && items[0][0].paid == 1 && items[0][0].out_cancel == 0" class="cancel_note"><p class="notep"><span class="before">Before</span> you cancel! <span class="before">first</span> read our <a class="cnr" (click)="gotocnr()">Cancellation and Refunds Policy.</a></p></span>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'completed'">
+    <div class="nodata" *ngIf="!itemss?.length"><img src="assets/imgs/NoDataAvailable.png"></div>
+
+     <div class="box" *ngFor="let item of itemss">
+	 <div class="clickable" (click)="item[0].paid == 1 ? nxt_ogo(item[0].session_id,item[0].provider_id) : null">
+    <div class="main_box" *ngFor="let ite of item">
+      <ion-list class="nne_slde">
+        <ion-item *ngFor="let serviceitem of ite.Services" class="brdr_nne">
+          <h5 [ngClass]="item[0].paid == 1 ? 'underline' : ''">{{serviceitem.Service.name}} </h5>  
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--h4 class="ttl_sb">Total - KES {{item[0].Services[0].Service.price}}</h4>
+     <h6>Schedule Date - {{item[0].scheduledate}} ({{item[0].scheduletime}})</h6-->
+	<h4 class="ttl_sb">Provider name</h4>
+	<h6>{{item[0].User.User.firstname}} {{item[0].User.User.lastname}}</h6>
+	
+	<h4 class="ttl_sb">Provider type</h4>
+	<h6>{{item[0].User.User.provider_type}}</h6>
+	
+	
+	 <h4 class="ttl_sb">Job location</h4>
+	<h6>{{item[0].location}}</h6>  
+	
+	 <h4 class="ttl_sb">Deposit paid</h4>
+	<h6>KES {{item[0].service_price}}</h6>
+	
+	 <h4 class="ttl_sb">Date of first meeting/discussion</h4>
+	<h6>{{item[0].scheduledate}} (between {{item[0].scheduletime}})</h6>
+	 </div>
+	<div class="pndng_btn">
+	<ion-grid no-padding>
+	<ion-row>
+	<ion-col col-4>
+    <button ion-button block round color="theme" class="btm_lrg" (click)="presentModal(item[0].provider_id,item[0].session_id)">RATE<br>THIS JOB</button></ion-col>
+	<ion-col col-4>
+	<button ion-button block round color="theme" class="btm_lrg" (click)="goToContact(item[0].provider_id,item[0].session_id)">REPORT<br>THIS JOB</button></ion-col>
+	<ion-col col-4>
+	 <button ion-button block round color="theme" class="btm_lrg" *ngIf="item[0].paid == 1" (click)="chat(item[0].provider_id)">CHAT WITH <br>PROVIDER</button>
+	 </ion-col>
+    </ion-row>
+	</ion-grid>
+	</div>
+	 
+    </div>
+
+
+  </ion-list>
+
+<ion-list *ngSwitchCase="'cancelled'">
+    <div class="nodata" *ngIf="!itemsss?.length"><img src="assets/imgs/NoDataAvailable.png"></div>
+     <div class="box" *ngFor="let item of itemsss">
+	  <div class="clickable" (click)="item[0].paid == 1 ? nxt_ogo(item[0].session_id,item[0].provider_id) : null">
+    <div class="main_box" *ngFor="let ite of item">
+      <ion-list class="nne_slde">
+        <ion-item *ngFor="let serviceitem of ite.Services" class="brdr_nne">
+          <h5>{{serviceitem.Service.name}} </h5>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!--h4 class="ttl_sb">Total - KES {{item[0].Services[0].Service.price}}</h4-->
+     <h6>Schedule Date - {{item[0].scheduledate}} ({{item[0].scheduletime}})</h6>
+	 
+	 	<ion-grid class="elctricdata" no-padding>
+		
+	<ion-row>
+	<ion-col col-6>
+	<label>Provider name:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.firstname}} {{item[0].User.User.lastname}}</h3> 
+	</ion-col>        
+	</ion-row>
+		
+	<ion-row>
+	<ion-col col-6>
+	<label>Distance:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.distance}} kilometers away</h3> 
+	</ion-col>        
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Provider type:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.provider_type}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Profession:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.profession}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Course:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.course}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Year of graduation:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.c_year}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Year of experience:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.work_exp}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Charge rate{{item[0].User.User.pertype}}:</label>
+	</ion-col>
+	<ion-col col-6>
+	<h3>{{item[0].User.User.rate}}</h3>
+	</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	<ion-col col-6>
+	<label>Average work rating:</label>
+	</ion-col>
+	<ion-col col-6>
+	<rating [(ngModel)]="item[0].User.User.avg_rating" readOnly="true" max="5"></rating>
+	</ion-col>
+	</ion-row>
+	</ion-grid>
+	 
+	 
+	 
+	 <h6><span class="reasn">Reason for declining:</span> {{item[0].cancel_reason}} </h6>
+    </div>
+    </div>
+  </ion-list>
+  <!--<ion-list *ngSwitchCase="'rescheduled'">
+    <div class="nodata" *ngIf="!itemssss?.length"><img src="assets/imgs/NoDataAvailable.png"></div>
+     <div class="box" *ngFor="let item of itemssss">
+    <div class="main_box" *ngFor="let ite of item">
+      <ion-list class="nne_slde">
+        <ion-item *ngFor="let serviceitem of ite.Services" class="brdr_nne">
+          <h5>{{serviceitem.Service.name}} </h5>
+        </ion-item>
+      </ion-list>
+    </div>
+    <h4 class="ttl_sb">Total - $ {{item[0].Services[0].Service.price}}</h4>
+     <h6>Schedule Date - {{item[0].scheduledate}} ({{item[0].scheduletime}})</h6>
+    </div>
+
+  </ion-list>-->
+</div>
+
+
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header>
+        
+  <ion-navbar>
+     <button (click)="goBack(providID)">
+        <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+    </button>
+     <ion-title class="header-title">chat</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar style="margin-top: 1px;min-height: 40px;">
+    <ion-grid>
+      <ion-row class="user">
+        <ion-col col-4></ion-col>
+        <ion-col col-8 text-right>Conversation with <span style="color:#02a499;">{{udata.firstname}} {{udata.lastname}}</span></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+        
+</ion-header>
+        
+<ion-content class="has-footer">
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div *ngIf="converstaion!=0" class="chatouter">
+  <div class="pd" *ngFor="let Chat_list of myChat">
+
+    <div class="boxchat chat-bubble right" *ngIf="Chat_list.chats.MSGFROM != id">
+      <div class="chat-users"> 
+        <p [innerHTML]="Chat_list.chats.message"></p>
+        <span class="time">{{Chat_list.chats.created | date:'MMM d, y h:mm a'}}</span>
+      </div>
+    </div>
+
+    <div class="boxchat chat-bubble left" *ngIf="Chat_list.chats.MSGFROM == id">
+      <div class="chat-users"> 
+        <p [innerHTML]="Chat_list.chats.message"></p>
+        <span class="time">{{Chat_list.chats.created | date:'MMM d, y h:mm a'}}</span>
+       </div>
+    </div>
+  </div>
+      </div>
+</ion-content>
+        
+<ion-footer class="footer_bg footer footer-ios">
+  <div class="chat_footer"> 
+    <div class="input_send">
+      <ion-textarea placeholder="Type a message" type="text" class="input inp_spc" [(ngModel)]="myInput" spellcheck="true" autocomplete="on"></ion-textarea>    
+      <!--<div class="fileUpload btn btn-primary">
+        <span><ion-icon name="attach"></ion-icon></span>
+        <input type="file" class="upload" />
+      </div>-->
+          
+      <div class="icon_send" (click)="sendmessage(myInput)"  *ngIf="myInput || fileSelected == 1">
+        <ion-icon name="send"></ion-icon>
+      </div>
+
+    </div>
+  </div>
+</ion-footer>
+        
